@@ -1,4 +1,4 @@
-**<h1 align="center">One Machine, Two Identities: The Git & SSH Mastery Guide</h1>
+<h1 align="center">One Machine, Two Identities: The Git & SSH Mastery Guide</h1>
 
 <p align="center">
   <b>If you have a Work GitHub and a Personal GitHub on the same Windows laptop, you know the headache.</b><br>
