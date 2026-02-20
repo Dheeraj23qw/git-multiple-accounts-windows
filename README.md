@@ -136,7 +136,7 @@ Host github.com-work
   <b>Built with ❤️ by a developer who survived the Git struggle.</b>
 </p>
 
-<h1 align="center">📜 The "All-Commands" Git & SSH Cheat Sheet</h1>
+<h1 align="center"> The "All-Commands" Git & SSH Cheat Sheet</h1>
 
 <p align="center">
   <b>A comprehensive list of every command required to set up and maintain a dual-identity Git environment.</b>
@@ -144,7 +144,7 @@ Host github.com-work
 
 ---
 
-<h2>🗝️ Phase 1: SSH Key Generation</h2>
+<h2> Phase 1: SSH Key Generation</h2>
 <p>Run these to create your unique digital IDs for each account.</p>
 
 <pre><code># Generate Personal Key
@@ -160,7 +160,7 @@ cat ~/.ssh/id_work.pub
 
 ---
 
-<h2>🧠 Phase 2: SSH Agent Management</h2>
+<h2> Phase 2: SSH Agent Management</h2>
 <p>Commands to start the memory manager and load your keys for the day.</p>
 
 <pre><code># Start the SSH Agent
@@ -179,7 +179,7 @@ ssh-add -D
 
 ---
 
-<h2>📡 Phase 3: Connection Testing</h2>
+<h2> Phase 3: Connection Testing</h2>
 <p>Verify that your <code>~/.ssh/config</code> aliases are working correctly.</p>
 
 <pre><code># Test Personal Identity Handshake
@@ -191,7 +191,7 @@ ssh -T git@github.com-work
 
 ---
 
-<h2>🤖 Phase 4: Git Identity & Audit</h2>
+<h2> Phase 4: Git Identity & Audit</h2>
 <p>Commands to verify that your <code>includeIf</code> logic is swapping your name and email correctly.</p>
 
 <pre><code># Check active email in current directory
@@ -209,7 +209,7 @@ git config user.name
 
 ---
 
-<h2>📥 Phase 5: Repository Operations</h2>
+<h2> Phase 5: Repository Operations</h2>
 <p>How to interact with projects using your new alias-based system.</p>
 
 <pre><code># Clone a Work Repo using the alias
@@ -227,7 +227,7 @@ git init
 
 ---
 
-<h2>📊 Master Command Reference Table</h2>
+<h2> Master Command Reference Table</h2>
 
 <table width="100%">
   <tr>
