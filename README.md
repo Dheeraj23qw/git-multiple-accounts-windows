@@ -63,12 +63,16 @@ ssh-add ~/.ssh/id_work
 <pre><code># Personal Alias
 Host github.com-self
     HostName github.com
+    User git
     IdentityFile ~/.ssh/id_self
+    IdentitiesOnly yes
 
 # Work Alias
 Host github.com-work
     HostName github.com
+    User git
     IdentityFile ~/.ssh/id_work
+    IdentitiesOnly yes
 </code></pre>
 
 ---
@@ -93,6 +97,19 @@ Host github.com-work
 <blockquote>
   <b>Crucial Point:</b> We use <code>gitdir/i:</code> because Windows is case-insensitive (it doesn't care about C: vs c:). The <code>/</code> at the end tells Git to include <i>everything</i> inside that folder.
 </blockquote>
+
+<h3>Creating Your Sub-Profile Configuration Files</h3>
+<p>For the conditional rules above to work properly, you must create the matching text profile files in your home directory:</p>
+
+<p>Create <code>~/.gitconfig-personal</code> and paste:</p>
+<pre><code>[user]
+    email = dheeraj9508820247@gmail.com
+</code></pre>
+
+<p>Create <code>~/.gitconfig-work</code> and paste:</p>
+<pre><code>[user]
+    email = codewithdheeraj19@gmail.com
+</code></pre>
 
 ---
 
@@ -227,6 +244,39 @@ git init
 
 ---
 
+<h2> Troubleshooting: Hidden Submodule Folder Lock</h2>
+<p>When running nested package scripts or initializing framework sub-folders (like <code>app-mobile</code>), a nested folder might contain an accidental hidden <code>.git</code> repository layer. This freezes parent indexing and blocks your files from staging.</p>
+
+<pre><code># 1. Purge the nested workspace tracker out of the main index cache
+git rm --cached [nested-folder-name]
+
+# 2. Safely wipe out the hidden nested inner repository directory
+rm -rf [nested-folder-name]/.git
+
+# 3. Stage the entire unified tree together seamlessly
+git add .
+</code></pre>
+
+---
+
+<h2> 🚀 Onboarding Protocol for Collaborative Teams</h2>
+<p>To onboard collaborative developers into a dual-managed project environment efficiently without dependency runtime discrepancies, distribute this fast setup playbook:</p>
+
+<pre><code># 1. Download the code map via your routed account identity alias
+git clone git@github.com-self:Dheeraj23qw/wizblow.git
+
+# 2. Install production-matched native project dependencies
+npm install
+
+# 3. Clear local Android build artifacts if build compilation errors occur
+npm run clean
+
+# 4. Initialize your local Android managed development client stream
+npm run android
+</code></pre>
+
+---
+
 <h2> Master Command Reference Table</h2>
 
 <table width="100%">
@@ -268,4 +318,4 @@ git init
 
 <p align="center">
   <b>Reference this sheet whenever you switch machines or set up a new environment.</b>
-</p>**
+</p>
